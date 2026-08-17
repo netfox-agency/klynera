@@ -33,8 +33,9 @@ Ou via `.claude/launch.json` : configuration `klynera` (port 4201).
 - Polices auto-hébergées (assets/fonts/, 4 woff2 latin, 78 Ko, préload des 2 critiques) : zéro requête Google Fonts
 - Images responsive : srcset hero 960/1440/1920 + services 600/1200, sizes précis
 - Title keyword-first, og:image:alt, skip-link clavier, 404.html, _headers Cloudflare (cache immutable + sécurité)
-- ⚠️ Placeholders à remplacer avant mise en ligne : domaine (klynera.fr = hypothèse), téléphone
-  (+33600000000), adresse/ville dans le schema LocalBusiness (addressLocality, areaServed)
+- ⚠️ Placeholders à remplacer avant mise en ligne : domaine (klynera.fr = hypothèse),
+  adresse/ville dans le schema LocalBusiness (addressLocality, areaServed).
+  Téléphone : fait (06 71 67 16 35, partout + schema).
 
 ## Pages métier (SEO/GEO, 2026-08-13)
 
@@ -48,7 +49,7 @@ Ou via `.claude/launch.json` : configuration `klynera` (port 4201).
 ## Reste à faire
 
 - Clé Web3Forms réelle (`VOTRE_CLE_WEB3FORMS`)
-- Téléphone réel (placeholder `06 00 00 00 00`) et email
+- Email réel (téléphone OK : 06 71 67 16 35)
 - Domaine + hébergement (Cloudflare Pages recommandé)
 - Mentions légales
 
