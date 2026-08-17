@@ -1,0 +1,18 @@
+# klynera.fr — ⚠️ domaine hypothèse, à confirmer avant mise en ligne
+User-agent: *
+Allow: /
+
+# Crawlers IA bienvenus (GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://www.klynera.fr/sitemap.xml
