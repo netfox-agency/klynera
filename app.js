@@ -98,6 +98,36 @@ if (prestationSelect) {
   });
 }
 
+// ─── Traçabilité de la source (premier contact conservé) ───
+// utm_*, gclid, referrer et page d'entrée sont capturés à l'arrivée puis
+// injectés dans chaque envoi de formulaire : chaque lead arrive avec sa source.
+const SRC_KEY = "klynera_src";
+(function captureSource() {
+  try {
+    const q = new URLSearchParams(location.search);
+    // Dernier levier identifié gagne : une arrivée avec utm/gclid remplace la
+    // source stockée ; sinon on conserve le premier contact connu.
+    if (localStorage.getItem(SRC_KEY) && !q.get("utm_source") && !q.get("gclid")) return;
+    const src = {
+      utm_source: q.get("utm_source") || "",
+      utm_medium: q.get("utm_medium") || "",
+      utm_campaign: q.get("utm_campaign") || "",
+      utm_term: q.get("utm_term") || "",
+      gclid: q.get("gclid") || "",
+      referrer: document.referrer || "direct",
+      landing: location.pathname,
+      first_visit: new Date().toISOString().slice(0, 16),
+    };
+    if (!src.utm_source && src.gclid) { src.utm_source = "google"; src.utm_medium = "cpc"; }
+    if (!src.utm_source && /google\./.test(src.referrer)) { src.utm_source = "google"; src.utm_medium = "organic"; }
+    if (!src.utm_source && /bing\.|duckduckgo\.|qwant\./.test(src.referrer)) { src.utm_medium = "organic"; }
+    localStorage.setItem(SRC_KEY, JSON.stringify(src));
+  } catch (e) { /* stockage indisponible : on continue sans */ }
+})();
+function getSource() {
+  try { return JSON.parse(localStorage.getItem(SRC_KEY)) || {}; } catch (e) { return {}; }
+}
+
 // Événements de conversion (dataLayer) : lead, clics téléphone, clics devis.
 // Inoffensif tant que GTM n'est pas branché ; prêt pour Google Ads / GA4.
 window.dataLayer = window.dataLayer || [];
@@ -105,7 +135,7 @@ function track(event, params) {
   window.dataLayer.push(Object.assign({ event }, params));
 }
 document.querySelectorAll('a[href^="tel:"]').forEach((a) => {
-  a.addEventListener("click", () => track("phone_click", { location: a.className }));
+  a.addEventListener("click", () => track("phone_click", Object.assign({ location: a.className, page: location.pathname }, getSource())));
 });
 document.querySelectorAll('a[href="#contact"]').forEach((a) => {
   a.addEventListener("click", () => track("cta_devis_click", { location: a.className || a.textContent.trim() }));
@@ -122,9 +152,17 @@ if (form) form.addEventListener("submit", async (e) => {
   const btnLabel = btn.textContent;
   btn.textContent = "Envoi en cours…";
   try {
+    const fd = new FormData(form);
+    const src = getSource();
+    fd.set("source", [src.utm_source, src.utm_medium, src.utm_campaign].filter(Boolean).join(" / ") || "direct ou inconnu");
+    fd.set("page_du_lead", location.pathname);
+    fd.set("page_d_entree", src.landing || "");
+    fd.set("referrer", src.referrer || "");
+    if (src.gclid) fd.set("gclid", src.gclid);
+    if (src.first_visit) fd.set("premiere_visite", src.first_visit);
     const res = await fetch(form.action, {
       method: "POST",
-      body: new FormData(form),
+      body: fd,
       headers: { Accept: "application/json" },
     });
     const data = await res.json();
@@ -133,7 +171,7 @@ if (form) form.addEventListener("submit", async (e) => {
       el.style.display = "none";
     });
     form.querySelector(".form-success").classList.add("visible");
-    track("generate_lead", { prestation: prestationSelect ? prestationSelect.value : "page" });
+    track("generate_lead", Object.assign({ prestation: prestationSelect ? prestationSelect.value : "page", page: location.pathname }, getSource()));
   } catch {
     error.classList.add("visible");
     btn.disabled = false;

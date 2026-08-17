@@ -46,6 +46,21 @@ Ou via `.claude/launch.json` : configuration `klynera` (port 4201).
 - Footer (toutes pages) : liens vers les 3 pages métier
 - sitemap.xml (4 URLs) et llms.txt (liens + détails) à jour
 
+## Traçabilité & mesure de rentabilité (2026-08-17)
+
+- **Source de chaque lead** : utm_source/medium/campaign, gclid, referrer, page d'entrée et
+  1re visite capturés à l'arrivée (localStorage, dernier levier identifié gagne) et injectés
+  dans chaque envoi Web3Forms → l'email du lead contient sa provenance. Les événements
+  dataLayer (`generate_lead`, `phone_click`) portent la même source.
+- **tracking/gtm-conteneur-klynera.json** : conteneur GTM prêt à importer (Admin > Importer) :
+  variables dataLayer, déclencheurs et tags GA4 pour les 3 événements. ⚠️ Remplacer la
+  constante `GA4 ID` (G-XXXXXXXXXX) et l'ID GTM dans index.html.
+- **tracking/suivi-leads-klynera.xlsx** : onglet Leads (1 ligne par demande, exemple en ligne 2)
+  + onglet Rentabilité (dépense pub et marge à saisir → CPL, coût/chantier, closing, CA, ROAS,
+  profit, détail par prestation). À dupliquer dans Google Sheets pour le partager au client.
+- **Suivi d'appels** : clics tél trackés côté site ; les appels réels = numéro de transfert
+  Google (à activer avec la campagne Ads) ou numéro dédié.
+
 ## Reste à faire
 
 - Clé Web3Forms réelle (`VOTRE_CLE_WEB3FORMS`)
