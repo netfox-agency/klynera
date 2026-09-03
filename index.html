@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nettoyage de vitres, fin de chantier &amp; automobile · Klynera</title>
-<meta name="description" content="Klynera, entreprise de nettoyage spécialisée : vitrerie sans trace, remise en état de fin de chantier et nettoyage automobile soigné. Devis gratuit et détaillé sous 24 h.">
+<meta name="description" content="Klynera, nettoyage spécialisé : vitrerie sans trace, fin de chantier et automobile soigné. Devis gratuit et détaillé sous 24 h.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#0a1622">
 <!-- ⚠️ DOMAINE : klynera.fr = hypothèse à confirmer avant mise en ligne (canonical, og, sitemap, robots, schema). -->
@@ -38,18 +38,35 @@
   "name": "Klynera",
   "url": "https://www.klynera.fr/",
   "telephone": "+33671671635",
+  "email": "contact@klynera.fr",
   "image": "https://www.klynera.fr/assets/og.jpg",
   "priceRange": "€€",
   "description": "Entreprise de nettoyage spécialisée : nettoyage de vitres (vitrines, baies vitrées, verrières), remise en état de fin de chantier et nettoyage automobile. Devis gratuit sous 24 h.",
   "slogan": "La propreté, au niveau au-dessus.",
   "address": {"@type": "PostalAddress", "addressCountry": "FR"},
+  "areaServed": {"@type": "Country", "name": "France"},
+  "knowsAbout": [
+    "Nettoyage de vitres",
+    "Nettoyage de vitrines commerciales",
+    "Nettoyage de fin de chantier",
+    "Nettoyage automobile",
+    "Entretien régulier de locaux professionnels"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+33671671635",
+    "email": "contact@klynera.fr",
+    "contactType": "customer service",
+    "areaServed": "FR",
+    "availableLanguage": ["French"]
+  },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Prestations de nettoyage",
     "itemListElement": [
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Nettoyage de vitres, vitrines et verrières"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Nettoyage de fin de chantier"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Nettoyage automobile intérieur et extérieur"}}
+      {"@type": "Offer", "itemOffered": {"@id": "https://www.klynera.fr/nettoyage-vitres/#service"}},
+      {"@type": "Offer", "itemOffered": {"@id": "https://www.klynera.fr/nettoyage-fin-de-chantier/#service"}},
+      {"@type": "Offer", "itemOffered": {"@id": "https://www.klynera.fr/nettoyage-automobile/#service"}}
     ]
   }
 }
@@ -70,12 +87,12 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type": "Question", "name": "Intervenez-vous pour les particuliers comme pour les professionnels ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Nous travaillons pour des commerces, bureaux, promoteurs et entreprises du bâtiment, comme pour des particuliers : baies vitrées, verrières, véhicules personnels."}},
-    {"@type": "Question", "name": "Le devis est-il vraiment gratuit ?", "acceptedAnswer": {"@type": "Answer", "text": "Toujours. Il est détaillé poste par poste, sans engagement, et envoyé sous 24 h après notre échange ou notre visite sur place."}},
-    {"@type": "Question", "name": "Comment est établi le prix ?", "acceptedAnswer": {"@type": "Answer", "text": "Sur quatre critères concrets : la surface, l'accès, l'état initial et la fréquence de passage. Aucun prix inventé au forfait : nous chiffrons après avoir compris votre besoin, et le passage régulier fait baisser le coût par intervention."}},
-    {"@type": "Question", "name": "Fournissez-vous le matériel et les produits ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, intégralement. Nous arrivons avec l'ensemble du matériel professionnel et des produits adaptés à chaque surface : vitrage, sols, carrosserie, textiles."}},
-    {"@type": "Question", "name": "Proposez-vous des contrats d'entretien régulier ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Pour les vitrines et les locaux professionnels, un passage régulier (hebdomadaire, bimensuel ou mensuel) garantit un résultat constant et un tarif optimisé."}},
-    {"@type": "Question", "name": "Êtes-vous assurés ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, nous disposons d'une assurance responsabilité civile professionnelle couvrant l'ensemble de nos interventions."}}
+    {"@type": "Question", "name": "Intervenez-vous pour les particuliers comme pour les professionnels ?", "acceptedAnswer": {"@type": "Answer", "text": "Klynera intervient pour les commerces, bureaux, promoteurs et entreprises du bâtiment comme pour les particuliers : baies vitrées, verrières et véhicules personnels."}},
+    {"@type": "Question", "name": "Le devis est-il vraiment gratuit ?", "acceptedAnswer": {"@type": "Answer", "text": "Le devis Klynera est toujours gratuit et sans engagement : détaillé poste par poste, il est envoyé sous 24 h après l'échange ou la visite sur place."}},
+    {"@type": "Question", "name": "Comment est établi le prix ?", "acceptedAnswer": {"@type": "Answer", "text": "Le prix d'une prestation de nettoyage dépend de quatre critères concrets : la surface, l'accès, l'état initial et la fréquence de passage. Klynera chiffre après avoir compris le besoin, sans forfait inventé, et le passage régulier fait baisser le coût par intervention."}},
+    {"@type": "Question", "name": "Fournissez-vous le matériel et les produits ?", "acceptedAnswer": {"@type": "Answer", "text": "Le matériel et les produits sont fournis intégralement par Klynera : équipement professionnel et produits adaptés à chaque surface, du vitrage aux textiles en passant par la carrosserie."}},
+    {"@type": "Question", "name": "Proposez-vous des contrats d'entretien régulier ?", "acceptedAnswer": {"@type": "Answer", "text": "Les contrats d'entretien régulier de Klynera (hebdomadaire, bimensuel ou mensuel) concernent les vitrines et les locaux professionnels : résultat constant et tarif optimisé par passage."}},
+    {"@type": "Question", "name": "Êtes-vous assurés ?", "acceptedAnswer": {"@type": "Answer", "text": "Klynera est couverte par une assurance responsabilité civile professionnelle sur l'ensemble de ses interventions."}}
   ]
 }
 </script>
@@ -162,7 +179,7 @@
       <a class="svc-cover" href="/nettoyage-vitres/" aria-label="Nettoyage de vitres : la prestation en détail"></a>
       <div class="svc-media">
         <span class="svc-num">01</span>
-        <img src="assets/service-vitres.webp" srcset="assets/service-vitres-600.webp 600w, assets/service-vitres.webp 1200w" sizes="(max-width: 760px) calc(100vw - 48px), (max-width: 1024px) 560px, 380px" width="1200" height="795" alt="Raclette professionnelle en laiton sur une vitre savonnée" loading="lazy" decoding="async">
+        <img src="assets/service-vitres.webp" srcset="assets/service-vitres-600.webp 600w, assets/service-vitres-900.webp 900w, assets/service-vitres.webp 1200w" sizes="(max-width: 760px) calc(100vw - 48px), (max-width: 1024px) 560px, 380px" width="1200" height="795" alt="Raclette professionnelle en laiton sur une vitre savonnée" loading="lazy" decoding="async">
       </div>
       <div class="svc-body">
         <h3>Nettoyage <em>de vitres</em></h3>
@@ -179,7 +196,7 @@
       <a class="svc-cover" href="/nettoyage-fin-de-chantier/" aria-label="Nettoyage de fin de chantier : la prestation en détail"></a>
       <div class="svc-media">
         <span class="svc-num">02</span>
-        <img src="assets/service-chantier.webp" srcset="assets/service-chantier-600.webp 600w, assets/service-chantier.webp 1200w" sizes="(max-width: 760px) calc(100vw - 48px), (max-width: 1024px) 560px, 380px" width="1200" height="1800" alt="Aspirateur de chantier et balai dans une pièce en fin de rénovation" loading="lazy" decoding="async">
+        <img src="assets/service-chantier.webp" srcset="assets/service-chantier-600.webp 600w, assets/service-chantier-900.webp 900w, assets/service-chantier.webp 1200w" sizes="(max-width: 760px) calc(100vw - 48px), (max-width: 1024px) 560px, 380px" width="1200" height="1800" alt="Aspirateur de chantier et balai dans une pièce en fin de rénovation" loading="lazy" decoding="async">
       </div>
       <div class="svc-body">
         <h3>Fin <em>de chantier</em></h3>
@@ -196,7 +213,7 @@
       <a class="svc-cover" href="/nettoyage-automobile/" aria-label="Nettoyage automobile : la prestation en détail"></a>
       <div class="svc-media">
         <span class="svc-num">03</span>
-        <img src="assets/service-voiture.webp" srcset="assets/service-voiture-600.webp 600w, assets/service-voiture.webp 1200w" sizes="(max-width: 760px) calc(100vw - 48px), (max-width: 1024px) 560px, 380px" width="1200" height="1800" alt="Berline de prestige recouverte de mousse pendant un lavage en atelier" loading="lazy" decoding="async">
+        <img src="assets/service-voiture.webp" srcset="assets/service-voiture-600.webp 600w, assets/service-voiture-900.webp 900w, assets/service-voiture.webp 1200w" sizes="(max-width: 760px) calc(100vw - 48px), (max-width: 1024px) 560px, 380px" width="1200" height="1800" alt="Berline de prestige recouverte de mousse pendant un lavage en atelier" loading="lazy" decoding="async">
       </div>
       <div class="svc-body">
         <h3>Nettoyage <em>automobile</em></h3>
@@ -227,7 +244,7 @@
       <a class="btn btn-light reveal" href="#contact">Parler de votre projet</a>
     </div>
     <div class="split-media reveal">
-      <img src="assets/standards.webp" srcset="assets/standards-600.webp 600w, assets/standards.webp 1200w" sizes="(max-width: 1024px) calc(100vw - 48px), 430px" width="1200" height="1800" alt="Agent Klynera au travail sur la vitrine d'un commerce" loading="lazy" decoding="async">
+      <img src="assets/standards.webp" srcset="assets/standards-600.webp 600w, assets/standards-900.webp 900w, assets/standards.webp 1200w" sizes="(max-width: 1024px) calc(100vw - 48px), 430px" width="1200" height="1800" alt="Agent Klynera au travail sur la vitrine d'un commerce" loading="lazy" decoding="async">
     </div>
   </div>
 </section>
@@ -272,27 +289,27 @@
   <div class="faq-list reveal">
     <details>
       <summary>Intervenez-vous pour les particuliers comme pour les professionnels ?<svg class="ico"><use href="#i-plus"/></svg></summary>
-      <p>Oui. Nous travaillons pour des commerces, bureaux, promoteurs et entreprises du bâtiment, comme pour des particuliers : baies vitrées, verrières, véhicules personnels.</p>
+      <p>Klynera intervient pour les commerces, bureaux, promoteurs et entreprises du bâtiment comme pour les particuliers : baies vitrées, verrières et véhicules personnels.</p>
     </details>
     <details>
       <summary>Le devis est-il vraiment gratuit ?<svg class="ico"><use href="#i-plus"/></svg></summary>
-      <p>Toujours. Il est détaillé poste par poste, sans engagement, et envoyé sous 24 h après notre échange ou notre visite sur place.</p>
+      <p>Le devis Klynera est toujours gratuit et sans engagement : détaillé poste par poste, il est envoyé sous 24 h après l'échange ou la visite sur place.</p>
     </details>
     <details>
       <summary>Comment est établi le prix ?<svg class="ico"><use href="#i-plus"/></svg></summary>
-      <p>Sur quatre critères concrets : la surface, l'accès, l'état initial et la fréquence de passage. Aucun prix inventé au forfait : nous chiffrons après avoir compris votre besoin, et le passage régulier fait baisser le coût par intervention.</p>
+      <p>Le prix d'une prestation de nettoyage dépend de quatre critères concrets : la surface, l'accès, l'état initial et la fréquence de passage. Klynera chiffre après avoir compris le besoin, sans forfait inventé, et le passage régulier fait baisser le coût par intervention.</p>
     </details>
     <details>
       <summary>Fournissez-vous le matériel et les produits ?<svg class="ico"><use href="#i-plus"/></svg></summary>
-      <p>Oui, intégralement. Nous arrivons avec l'ensemble du matériel professionnel et des produits adaptés à chaque surface : vitrage, sols, carrosserie, textiles.</p>
+      <p>Le matériel et les produits sont fournis intégralement par Klynera : équipement professionnel et produits adaptés à chaque surface, du vitrage aux textiles en passant par la carrosserie.</p>
     </details>
     <details>
       <summary>Proposez-vous des contrats d'entretien régulier ?<svg class="ico"><use href="#i-plus"/></svg></summary>
-      <p>Oui. Pour les vitrines et les locaux professionnels, un passage régulier (hebdomadaire, bimensuel ou mensuel) garantit un résultat constant et un tarif optimisé.</p>
+      <p>Les contrats d'entretien régulier de Klynera (hebdomadaire, bimensuel ou mensuel) concernent les vitrines et les locaux professionnels : résultat constant et tarif optimisé par passage.</p>
     </details>
     <details>
       <summary>Êtes-vous assurés ?<svg class="ico"><use href="#i-plus"/></svg></summary>
-      <p>Oui, nous disposons d'une assurance responsabilité civile professionnelle couvrant l'ensemble de nos interventions.</p>
+      <p>Klynera est couverte par une assurance responsabilité civile professionnelle sur l'ensemble de ses interventions.</p>
     </details>
   </div>
 </section>
@@ -374,7 +391,7 @@
     </nav>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 Klynera · Tous droits réservés</span>
+    <span>© 2026 Klynera · <a href="/mentions-legales/">Mentions légales</a></span>
     <span>Photos : Pexels, libres de droits</span>
   </div>
 </footer>

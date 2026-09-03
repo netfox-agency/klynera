@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nettoyage automobile intérieur et extérieur · Klynera</title>
-<meta name="description" content="Nettoyage automobile soigné : lavage main avec prélavage mousse, intérieur complet, textiles et plastiques traités. Véhicules particuliers et flottes d'entreprise. Devis sous 24 h.">
+<meta name="description" content="Nettoyage automobile soigné : lavage main, prélavage mousse, intérieur complet. Particuliers et flottes d'entreprise. Devis sous 24 h.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#0a1622">
 <!-- ⚠️ DOMAINE : klynera.fr = hypothèse à confirmer avant mise en ligne. -->
@@ -13,11 +13,12 @@
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="Klynera">
 <meta property="og:title" content="Nettoyage automobile intérieur et extérieur · Klynera">
-<meta property="og:description" content="Nettoyage automobile soigné : lavage main avec prélavage mousse, intérieur complet, textiles et plastiques traités. Véhicules particuliers et flottes d'entreprise. Devis sous 24 h.">
+<meta property="og:description" content="Nettoyage automobile soigné : lavage main, prélavage mousse, intérieur complet. Particuliers et flottes d'entreprise. Devis sous 24 h.">
 <meta property="og:url" content="https://www.klynera.fr/nettoyage-automobile/">
 <meta property="og:image" content="https://www.klynera.fr/assets/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Nettoyage professionnel d'une baie vitrée par Klynera">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://www.klynera.fr/assets/og.jpg">
 <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/instrument-sans-var.woff2" crossorigin>
@@ -32,10 +33,14 @@
   "@id": "https://www.klynera.fr/nettoyage-automobile/#service",
   "name": "Nettoyage automobile intérieur et extérieur",
   "serviceType": "Nettoyage automobile intérieur et extérieur",
-  "description": "Nettoyage automobile soigné : lavage main avec prélavage mousse, intérieur complet, textiles et plastiques traités. Véhicules particuliers et flottes d'entreprise. Devis sous 24 h.",
+  "description": "Nettoyage automobile soigné : lavage main, prélavage mousse, intérieur complet. Particuliers et flottes d'entreprise. Devis sous 24 h.",
   "url": "https://www.klynera.fr/nettoyage-automobile/",
   "provider": {
-    "@id": "https://www.klynera.fr/#business"
+    "@type": "LocalBusiness",
+    "@id": "https://www.klynera.fr/#business",
+    "name": "Klynera",
+    "url": "https://www.klynera.fr/",
+    "telephone": "+33671671635"
   },
   "areaServed": {
     "@type": "Country",
@@ -70,10 +75,18 @@
   "mainEntity": [
     {
       "@type": "Question",
+      "name": "Intervenez-vous à domicile ou faut-il amener le véhicule ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "L'intervention se fait là où le véhicule se trouve : domicile, bureau ou parking d'entreprise, selon l'accès disponible. Le lieu exact et les conditions sont confirmés au moment du devis."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Pourquoi un lavage à la main plutôt qu'un portique à rouleaux ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Les rouleaux frottent la saleté contre la carrosserie et créent des micro-rayures visibles au soleil. Le prélavage mousse décolle d'abord les particules, puis le lavage main nettoie sans agresser le vernis."
+        "text": "Les portiques à rouleaux frottent la saleté contre la carrosserie et créent des micro-rayures visibles au soleil. Le prélavage mousse décolle d'abord les particules, puis le lavage à la main nettoie sans agresser le vernis : c'est la méthode Klynera."
       }
     },
     {
@@ -81,7 +94,7 @@
       "name": "Faites-vous le shampouinage des sièges ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Oui. Textiles et moquettes sont shampouinés quand leur état le demande, et les cuirs sont nettoyés puis nourris avec des produits dédiés."
+        "text": "Le shampouinage des sièges et des moquettes fait partie du nettoyage intérieur quand leur état le demande, et les cuirs sont nettoyés puis nourris avec des produits dédiés."
       }
     },
     {
@@ -89,7 +102,7 @@
       "name": "Combien de temps faut-il prévoir ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Un extérieur seul se fait dans l'heure. Un nettoyage complet intérieur et extérieur demande une demi-journée selon l'état du véhicule. Le devis précise la durée exacte."
+        "text": "Un nettoyage extérieur seul se fait dans l'heure ; un nettoyage complet intérieur et extérieur demande une demi-journée selon l'état du véhicule. Le devis précise la durée exacte."
       }
     },
     {
@@ -97,7 +110,7 @@
       "name": "Nettoyez-vous un véhicule avant sa mise en vente ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Oui, et c'est l'un des meilleurs investissements avant une vente : un véhicule impeccable inspire confiance, se vend mieux et plus vite."
+        "text": "Un nettoyage complet avant une mise en vente est l'un des meilleurs investissements sur un véhicule : un habitacle et une carrosserie impeccables inspirent confiance, et la voiture se vend mieux et plus vite."
       }
     },
     {
@@ -105,7 +118,7 @@
       "name": "Gérez-vous les flottes d'entreprise ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Oui : passages réguliers planifiés sur votre site ou le nôtre, suivi par véhicule et facturation mensuelle simple."
+        "text": "Les flottes d'entreprise sont gérées par Klynera avec des passages réguliers planifiés, un suivi par véhicule et une facturation mensuelle simple."
       }
     }
   ]
@@ -120,6 +133,7 @@
     <symbol id="i-check" viewBox="0 0 16 16"><path d="M2.5 8.5 6 12l7.5-8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 18 12"><path d="M1 6h15m0 0-4.6-4.6M16 6l-4.6 4.6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-plus" viewBox="0 0 16 16"><path d="M8 2.5v11M2.5 8h11" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="i-star" viewBox="0 0 16 16"><path d="m8 1.6 1.9 3.9 4.3.6-3.1 3 .7 4.3L8 11.4l-3.8 2 .7-4.3-3.1-3 4.3-.6Z"/></symbol>
     <symbol id="i-phone" viewBox="0 0 20 20"><path d="M4.2 2.8h3l1.5 3.8-1.9 1.5a11.5 11.5 0 0 0 5.1 5.1l1.5-1.9 3.8 1.5v3c0 .9-.7 1.6-1.6 1.5C8.7 16.8 3.2 11.3 2.7 4.4c-.1-.9.6-1.6 1.5-1.6Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
   </defs>
 </svg>
@@ -143,57 +157,61 @@
 <header class="subhead">
   <nav class="breadcrumb" aria-label="Fil d'Ariane"><a href="/">Accueil</a><span>·</span><span>Nettoyage automobile</span></nav>
   <h1>Nettoyage automobile, <em>soin d'atelier.</em></h1>
-  <p class="section-lede">Carrosserie, jantes, vitres, habitacle : votre véhicule traité avec les produits et les gestes d'un atelier, pas d'une station de lavage.</p>
+  <p class="section-lede">Carrosserie, jantes, vitres, habitacle : votre véhicule traité avec les produits et les gestes d'un professionnel, là où il se trouve.</p>
 </header>
 
 <section class="section" style="padding-top:56px">
   <div class="prose reveal">
-<h2>L'extérieur</h2>
-<ul>
-  <li>Prélavage mousse : décoller la saleté avant de toucher la carrosserie</li>
-  <li>Lavage à la main, méthode des deux seaux, gants microfibre</li>
-  <li>Jantes et passages de roue dégraissés</li>
-  <li>Vitres extérieures sans trace</li>
-  <li>Séchage microfibre, sans marque d'eau</li>
-</ul>
-<h2>L'intérieur</h2>
-<ul>
-  <li>Aspiration complète : sièges, tapis, moquettes, coffre</li>
-  <li>Plastiques et tableau de bord nettoyés et ravivés</li>
-  <li>Textiles shampouinés si nécessaire, cuirs traités avec produits dédiés</li>
-  <li>Vitres intérieures et rétroviseurs</li>
-  <li>Habitacle désodorisé</li>
-</ul>
-<h2>Particuliers et flottes</h2>
-<p>Pour un véhicule personnel, un nettoyage complet avant une vente <strong>se récupère largement sur le prix</strong> : un habitacle impeccable se vend mieux et plus vite. Pour les entreprises, une flotte propre est une image commerciale qui roule : nous planifions des passages réguliers avec une facturation simple.</p>
+<h2>Avant une vente, pour une flotte, ou juste pour rouler propre</h2>
+<p>Pour un véhicule personnel, un nettoyage complet avant une mise en vente <strong>se récupère largement sur le prix</strong> : un habitacle et une carrosserie impeccables inspirent confiance, la voiture se vend mieux et plus vite. Pour les entreprises, une flotte propre est une image commerciale qui roule : passages réguliers planifiés, suivi par véhicule, facturation mensuelle simple.</p>
+<h2>Le déroulé d'un nettoyage complet</h2>
+<ol>
+  <li><strong>Prélavage mousse.</strong> La saleté est décollée avant tout contact avec la carrosserie : c'est ce qui évite les micro-rayures.</li>
+  <li><strong>Jantes et passages de roue.</strong> Dégraissage aux produits dédiés.</li>
+  <li><strong>Lavage main, méthode des deux seaux.</strong> Gant microfibre, rinçage permanent, aucun frottement de particules.</li>
+  <li><strong>Séchage microfibre.</strong> Sans marque d'eau, vitres extérieures comprises.</li>
+  <li><strong>Intérieur complet.</strong> Aspiration (sièges, tapis, coffre), plastiques ravivés, textiles shampouinés si besoin, vitres intérieures, habitacle désodorisé.</li>
+  <li><strong>Contrôle final avec vous.</strong> Tour du véhicule avant restitution.</li>
+</ol>
+<h2>Combien coûte un nettoyage automobile</h2>
+<p>Le prix dépend du gabarit du véhicule (citadine, berline, SUV, utilitaire), de son état intérieur et extérieur, et de la profondeur demandée : extérieur seul, intérieur seul ou remise à neuf complète. Un extérieur se fait dans l'heure, un complet demande une demi-journée. Le devis Klynera est gratuit et envoyé sous 24 h, avec le détail exact de ce qui est inclus.</p>
   </div>
+  <figure class="page-review reveal">
+    <div class="stars" aria-label="5 étoiles sur 5"><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg></div>
+    <blockquote>« Ma voiture est ressortie comme neuve, intérieur compris. On sent le soin du détail du début à la fin. »</blockquote>
+    <figcaption>Nadia · particulier</figcaption>
+  </figure>
 </section>
 
-<section class="section" id="faq-page">
+<section class="section" id="faq-page" style="padding-top:0">
   <header class="section-head reveal">
     <p class="eyebrow">Questions fréquentes</p>
     <h2 class="section-title">Vous vous demandez <em>sûrement…</em></h2>
   </header>
   <div class="faq-list reveal">
     <details>
+      <summary>Intervenez-vous à domicile ou faut-il amener le véhicule ?<svg class="ico"><use href="#i-plus"/></svg></summary>
+      <p>L'intervention se fait là où le véhicule se trouve : domicile, bureau ou parking d'entreprise, selon l'accès disponible. Le lieu exact et les conditions sont confirmés au moment du devis.</p>
+    </details>
+    <details>
       <summary>Pourquoi un lavage à la main plutôt qu'un portique à rouleaux ?<svg class="ico"><use href="#i-plus"/></svg></summary>
-      <p>Les rouleaux frottent la saleté contre la carrosserie et créent des micro-rayures visibles au soleil. Le prélavage mousse décolle d'abord les particules, puis le lavage main nettoie sans agresser le vernis.</p>
+      <p>Les portiques à rouleaux frottent la saleté contre la carrosserie et créent des micro-rayures visibles au soleil. Le prélavage mousse décolle d'abord les particules, puis le lavage à la main nettoie sans agresser le vernis : c'est la méthode Klynera.</p>
     </details>
     <details>
       <summary>Faites-vous le shampouinage des sièges ?<svg class="ico"><use href="#i-plus"/></svg></summary>
-      <p>Oui. Textiles et moquettes sont shampouinés quand leur état le demande, et les cuirs sont nettoyés puis nourris avec des produits dédiés.</p>
+      <p>Le shampouinage des sièges et des moquettes fait partie du nettoyage intérieur quand leur état le demande, et les cuirs sont nettoyés puis nourris avec des produits dédiés.</p>
     </details>
     <details>
       <summary>Combien de temps faut-il prévoir ?<svg class="ico"><use href="#i-plus"/></svg></summary>
-      <p>Un extérieur seul se fait dans l'heure. Un nettoyage complet intérieur et extérieur demande une demi-journée selon l'état du véhicule. Le devis précise la durée exacte.</p>
+      <p>Un nettoyage extérieur seul se fait dans l'heure ; un nettoyage complet intérieur et extérieur demande une demi-journée selon l'état du véhicule. Le devis précise la durée exacte.</p>
     </details>
     <details>
       <summary>Nettoyez-vous un véhicule avant sa mise en vente ?<svg class="ico"><use href="#i-plus"/></svg></summary>
-      <p>Oui, et c'est l'un des meilleurs investissements avant une vente : un véhicule impeccable inspire confiance, se vend mieux et plus vite.</p>
+      <p>Un nettoyage complet avant une mise en vente est l'un des meilleurs investissements sur un véhicule : un habitacle et une carrosserie impeccables inspirent confiance, et la voiture se vend mieux et plus vite.</p>
     </details>
     <details>
       <summary>Gérez-vous les flottes d'entreprise ?<svg class="ico"><use href="#i-plus"/></svg></summary>
-      <p>Oui : passages réguliers planifiés sur votre site ou le nôtre, suivi par véhicule et facturation mensuelle simple.</p>
+      <p>Les flottes d'entreprise sont gérées par Klynera avec des passages réguliers planifiés, un suivi par véhicule et une facturation mensuelle simple.</p>
     </details>
   </div>
 </section>
@@ -231,7 +249,7 @@
         </div>
       </label>
       <label>Votre message <span class="opt">(facultatif)</span><textarea name="message" rows="4" placeholder="Décrivez votre besoin : lieu, surfaces, délais…"></textarea></label>
-      <button class="btn btn-primary btn-block" type="submit">Envoyer ma demande</button>
+      <button class="btn btn-primary btn-block" type="submit">Demander mon devis auto</button>
       <p class="form-error" role="alert">L'envoi a échoué. Réessayez ou appelez-nous directement.</p>
       <p class="form-note">Réponse sous 24 h ouvrées. Vos données ne sont jamais partagées.</p>
       <div class="form-success" aria-live="polite">
@@ -264,7 +282,7 @@
     </nav>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 Klynera · Tous droits réservés</span>
+    <span>© 2026 Klynera · <a href="/mentions-legales/">Mentions légales</a></span>
     <span>Photos : Pexels, libres de droits</span>
   </div>
 </footer>

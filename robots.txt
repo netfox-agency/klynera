@@ -9,7 +9,13 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: PerplexityBot
+Allow: /
+
+User-agent: meta-externalagent
 Allow: /
 
 User-agent: Google-Extended

@@ -22,7 +22,7 @@ const observer = new IntersectionObserver(
 );
 document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 
-window.addEventListener("scroll", revealCheck, { passive: true });
+// L'IntersectionObserver gère la suite ; un seul check initial pour ce qui est déjà visible.
 window.addEventListener("resize", revealCheck);
 revealCheck();
 
@@ -68,7 +68,7 @@ if (aboutReveal && !reducedMotion) {
     const count = Math.floor(chars.length * progress);
     chars.forEach((c, i) => c.classList.toggle("on", i < count));
   };
-  window.addEventListener("scroll", aboutCheck, { passive: true });
+  window.__aboutCheck = aboutCheck;
   aboutCheck();
   if (new URLSearchParams(location.search).has("all")) {
     chars.forEach((c) => c.classList.add("on"));
@@ -85,7 +85,17 @@ function navCheck() {
   if (heroEl) nav.classList.toggle("nav-solid", window.scrollY > 40);
   if (mobileBar) mobileBar.classList.toggle("on", window.scrollY > barThreshold());
 }
-window.addEventListener("scroll", navCheck, { passive: true });
+// Listener de scroll unique pour toute la page, throttlé sur une frame
+let scrollScheduled = false;
+window.addEventListener("scroll", () => {
+  if (scrollScheduled) return;
+  scrollScheduled = true;
+  requestAnimationFrame(() => {
+    navCheck();
+    if (window.__aboutCheck) window.__aboutCheck();
+    scrollScheduled = false;
+  });
+}, { passive: true });
 navCheck();
 
 // Les CTA par métier préremplissent la prestation du formulaire

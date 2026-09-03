@@ -8,22 +8,6 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
-  font-family: "Instrument Sans";
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/instrument-sans-italic-var.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: "Instrument Serif";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/instrument-serif.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face {
   font-family: "Instrument Serif";
   font-style: italic;
   font-weight: 400;
@@ -827,6 +811,12 @@ section[id], footer, header[id] { scroll-margin-top: 96px; }
 .prose ul { margin: 14px 0 0 2px; list-style: none; display: flex; flex-direction: column; gap: 10px; }
 .prose li { position: relative; padding-left: 26px; }
 .prose li::before { content: ""; position: absolute; left: 2px; top: 0.62em; width: 14px; height: 2px; background: var(--azur); }
+.prose ol { margin: 14px 0 0 2px; list-style: none; counter-reset: etape; display: flex; flex-direction: column; gap: 12px; }
+.prose ol li { position: relative; padding-left: 34px; counter-increment: etape; }
+.prose ol li::before { content: counter(etape); position: absolute; left: 0; top: 0.1em; width: 22px; height: 22px; border-radius: 50%; background: rgba(20, 98, 212, 0.1); color: var(--azur); font-size: 0.78rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.page-review { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 22px 0; margin: 40px 0 8px; max-width: 720px; }
+.page-review blockquote { font-size: 1.05rem; color: var(--ink-soft); margin: 12px 0 10px; }
+.page-review figcaption { font-weight: 600; font-size: 0.9rem; }
 
 /* carte service : lien de couverture + lien devis distinct au-dessus */
 .svc-card { position: relative; }
