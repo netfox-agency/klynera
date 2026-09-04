@@ -1,7 +1,7 @@
 # Klynera · Site vitrine
 
 One-page statique premium pour Klynera, entreprise de nettoyage spécialisée :
-vitrerie, fin de chantier et automobile.
+vitrerie, fin de chantier et bureaux.
 
 ## Stack
 
@@ -39,7 +39,7 @@ Ou via `.claude/launch.json` : configuration `klynera` (port 4201).
 
 ## Pages métier (SEO/GEO, 2026-08-13)
 
-- `/nettoyage-vitres/`, `/nettoyage-fin-de-chantier/`, `/nettoyage-automobile/` :
+- `/nettoyage-vitres/`, `/nettoyage-fin-de-chantier/`, `/nettoyage-bureaux/` :
   contenu unique (~700 mots), FAQ propre (5 questions + schema FAQPage), schema Service
   + BreadcrumbList, formulaire prérempli par page, maillage interne croisé
 - Accueil : cartes services -> pages métier (lien de couverture) + lien devis conservé (z-index au-dessus)
@@ -75,5 +75,5 @@ Ou via `.claude/launch.json` : configuration `klynera` (port 4201).
 | hero.webp (recadré 16:9) | 6195105 |
 | service-vitres.webp | 31435403 |
 | service-chantier.webp | 3616746 |
-| service-voiture.webp | 6872609 |
+| service-bureaux.webp | 6197108 |
 | standards.webp | 37440103 |
