@@ -75,5 +75,5 @@ Ou via `.claude/launch.json` : configuration `klynera` (port 4201).
 | hero.webp (recadré 16:9) | 6195105 |
 | service-vitres.webp | 31435403 |
 | service-chantier.webp | 3616746 |
-| service-bureaux.webp | 6197108 |
+| service-bureaux.webp | 5882568 |
 | standards.webp | 37440103 |
