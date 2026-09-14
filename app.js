@@ -85,17 +85,26 @@ function navCheck() {
   nav.classList.toggle("nav-solid", !heroEl || window.scrollY > 40);
   if (mobileBar) mobileBar.classList.toggle("on", window.scrollY > barThreshold());
 }
-// Listener de scroll unique pour toute la page, throttlé sur une frame
-let scrollScheduled = false;
+// Listener de scroll unique pour toute la page, throttlé sur une frame.
+// L'id sert de verrou : en onglet masqué rAF ne s'exécute pas, donc on le
+// relâche et on resynchronise au retour de visibilité (sinon la nav et la
+// barre mobile resteraient figées pour le reste de la session).
+let scrollRaf = 0;
+function syncOnScroll() {
+  scrollRaf = 0;
+  navCheck();
+  if (window.__aboutCheck) window.__aboutCheck();
+}
 window.addEventListener("scroll", () => {
-  if (scrollScheduled) return;
-  scrollScheduled = true;
-  requestAnimationFrame(() => {
-    navCheck();
-    if (window.__aboutCheck) window.__aboutCheck();
-    scrollScheduled = false;
-  });
+  if (scrollRaf) return;
+  scrollRaf = requestAnimationFrame(syncOnScroll);
 }, { passive: true });
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) return;
+  if (scrollRaf) cancelAnimationFrame(scrollRaf);
+  syncOnScroll();
+  revealCheck();
+});
 navCheck();
 
 // Les CTA par métier préremplissent la prestation du formulaire
