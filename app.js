@@ -82,7 +82,7 @@ const mobileBar = document.querySelector(".mobile-bar");
 const heroEl = document.querySelector(".hero");
 const barThreshold = () => (heroEl ? heroEl.offsetHeight * 0.6 : 300);
 function navCheck() {
-  if (heroEl) nav.classList.toggle("nav-solid", window.scrollY > 40);
+  nav.classList.toggle("nav-solid", !heroEl || window.scrollY > 40);
   if (mobileBar) mobileBar.classList.toggle("on", window.scrollY > barThreshold());
 }
 // Listener de scroll unique pour toute la page, throttlé sur une frame
