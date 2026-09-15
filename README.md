@@ -54,7 +54,7 @@ surfaces que l'accueil :
 
 | Surface | Section | Traitement |
 |---|---|---|
-| papier | `.lp-head` | titre + photo en carte arrondie |
+| **encre** | `.svc-hero` | hero court (62svh) : photo en saignée à droite, texte sur encre |
 | **blanc** | Périmètre | `.lp-scope` : checklist 2 colonnes, pastilles `.icbox` |
 | **encre sombre** | Déroulé | `.lp-steps` : numéros serif italique azur clair, 2 colonnes |
 | papier | Méthode + Budget | `.lp-cols` : prose 1,1fr + `.lp-price` (carte blanche sticky, CTA devis) |
@@ -64,6 +64,28 @@ surfaces que l'accueil :
 
 Le contenu SEO est repris **au mot près** : aucun h2, aucune phrase, aucun lien interne
 n'a été réécrit. Seule la mise en forme change.
+
+### Hero de page métier (`.svc-hero`)
+
+Bande pleine largeur, `min-height: clamp(470px, 62svh, 615px)` — la moitié de l'accueil.
+Fond `--ink`, photo du métier en saignée sur les 56 % de droite, texte dans la zone encre.
+
+Pourquoi pas une photo plein cadre avec texte blanc dessus, comme l'accueil : les trois
+photos métier ont été mesurées (luminance par blocs sur le cadrage hero). `ph-chantier`
+est entre 150 et 241 partout, `ph-bureaux` est tacheté (48 à 176) : aucune zone sombre
+où poser du texte blanc. Il aurait fallu un voile global sur la photo, motif rejeté.
+Le fond encre donne un contraste parfait sans jamais assombrir l'image.
+
+Seuls des **fondus d'arête** touchent la photo : haut (160 px, pour la nav) et gauche
+(vers l'encre, ramp resserrée 17 % → 63 % pour éviter le voile laiteux sur photo claire).
+Le sujet reste en pleine lumière à droite. `object-position` réglé par page pour amener
+le sujet dans la zone claire : vitres `62% 45%`, chantier `22% 58%`, bureaux `72% 50%`.
+
+Mobile (< 900 px) : la bande se déplie — photo en haut (34svh) puis panneau encre en
+dessous, fondu bas vers l'encre, plus un fondu haut pour la nav. Aucune superposition.
+
+`app.js` : le sélecteur du hero devient `.hero, .svc-hero`, donc la nav redevient
+transparente en haut de page puis pleine à 40 px, comme sur l'accueil.
 
 Ajouts CSS : `.lp-scope`, `.lp-steps`, `.lp-step`, `.lp-step-n`, `.lp-cols`, `.lp-price`,
 `.lp-quote`, `.prose a` (les liens internes n'avaient aucun style : invisibles).

@@ -79,7 +79,7 @@ if (aboutReveal && !reducedMotion) {
 // Barre mobile : n'apparaît qu'après le hero (ses CTA suffisent au premier écran).
 const nav = document.getElementById("nav");
 const mobileBar = document.querySelector(".mobile-bar");
-const heroEl = document.querySelector(".hero");
+const heroEl = document.querySelector(".hero, .svc-hero");
 const barThreshold = () => (heroEl ? heroEl.offsetHeight * 0.6 : 300);
 function navCheck() {
   nav.classList.toggle("nav-solid", !heroEl || window.scrollY > 40);
