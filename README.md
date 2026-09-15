@@ -33,9 +33,9 @@ Ou via `.claude/launch.json` : configuration `klynera` (port 4201).
 - Polices auto-hébergées (assets/fonts/, 4 woff2 latin, 78 Ko, préload des 2 critiques) : zéro requête Google Fonts
 - Images responsive : srcset hero 960/1440/1920 + services 600/1200, sizes précis
 - Title keyword-first, og:image:alt, skip-link clavier, 404.html, _headers Cloudflare (cache immutable + sécurité)
-- ⚠️ Placeholders à remplacer avant mise en ligne : domaine (klynera.fr = hypothèse),
-  adresse/ville dans le schema LocalBusiness (addressLocality, areaServed).
-  Téléphone : fait (06 71 67 16 35, partout + schema).
+- Domaine de production : **klynera-nettoyage.fr** (sans www ; www ne résout pas). Téléphone : fait.
+- ⚠️ Restent à compléter : ville dans le schema LocalBusiness (addressLocality/areaServed),
+  clé Web3Forms, boîte contact@klynera-nettoyage.fr (ou adresse de repli), SIRET des mentions.
 
 ## Pages métier (SEO/GEO, 2026-08-13)
 

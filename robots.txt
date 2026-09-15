@@ -1,4 +1,4 @@
-# klynera.fr — ⚠️ domaine hypothèse, à confirmer avant mise en ligne
+# klynera-nettoyage.fr — domaine de production
 User-agent: *
 Allow: /
 
@@ -21,4 +21,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://www.klynera.fr/sitemap.xml
+Sitemap: https://klynera-nettoyage.fr/sitemap.xml
