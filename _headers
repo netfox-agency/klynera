@@ -1,14 +1,14 @@
-# Cloudflare Pages — cache & sécurité
-/assets/*
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.webp
-  Cache-Control: public, max-age=31536000, immutable
-
+# Cloudflare Pages — sécurité (toutes les réponses)
+# Une seule règle peut définir Cache-Control par chemin : Cloudflare CONCATÈNE
+# les valeurs de toutes les règles qui matchent. C'est pourquoi le cache long
+# des assets est isolé dans sa propre règle, et /* ne porte que la sécurité.
 /*
-  Cache-Control: public, max-age=0, must-revalidate
   Strict-Transport-Security: max-age=31536000; includeSubDomains
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Images, polices : versionnées par leur nom, cache 1 an
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
