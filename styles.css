@@ -885,6 +885,16 @@ section[id], footer, header[id] { scroll-margin-top: 96px; }
 }
 .prose p + p { margin-top: 16px; }
 .prose strong { color: var(--ink); font-weight: 600; }
+.prose a {
+  color: var(--azur);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(20, 98, 212, 0.35);
+  transition: text-decoration-color 0.25s var(--ease);
+}
+.prose a:hover { text-decoration-color: var(--azur); }
 .prose h2 {
   color: var(--ink);
   font-size: clamp(1.5rem, 2.6vw, 2rem);
@@ -907,6 +917,115 @@ section[id], footer, header[id] { scroll-margin-top: 96px; }
 .svc-card { position: relative; }
 .svc-cover { position: absolute; inset: 0; z-index: 1; border-radius: inherit; }
 .svc-link { position: relative; z-index: 2; }
+
+
+/* ─────────── Pages métier : rythme éditorial ─────────── */
+/* Périmètre : grille de checks sur surface blanche */
+.lp-scope {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px 56px;
+}
+.lp-scope li { display: flex; align-items: flex-start; gap: 15px; }
+.lp-scope .icbox { width: 36px; height: 36px; border-radius: 11px; flex: none; }
+.lp-scope .icbox .ico { width: 16px; height: 16px; }
+.lp-scope span:last-child { color: var(--ink-soft); font-size: 1rem; padding-top: 6px; }
+
+/* Déroulé : bande sombre, grands numéros */
+.lp-steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 60px;
+  margin-top: 8px;
+}
+.lp-step { display: flex; align-items: flex-start; gap: 22px; }
+.lp-step-n {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-style: italic;
+  font-size: 2.5rem;
+  line-height: 0.9;
+  color: #7cbcff;
+  flex: none;
+  min-width: 46px;
+}
+.lp-step h3 {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  margin-bottom: 7px;
+}
+.lp-step p { color: rgba(255, 255, 255, 0.62); font-size: 0.97rem; line-height: 1.6; }
+
+/* Méthode + budget en deux colonnes */
+.lp-cols {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(40px, 5vw, 72px);
+  align-items: start;
+}
+.lp-cols .prose { max-width: none; }
+.lp-cols .prose h2:first-child { margin-top: 0; }
+.lp-price {
+  background: var(--white);
+  border-radius: 18px;
+  padding: 34px 32px;
+  box-shadow: 0 1px 2px rgba(10, 22, 34, 0.05), 0 12px 34px rgba(10, 22, 34, 0.07), inset 0 0 0 1px var(--line-soft);
+  position: sticky;
+  top: 108px;
+}
+.lp-price h2 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 12px 0 14px;
+}
+.lp-price p:not(.eyebrow) { color: var(--ink-soft); font-size: 0.97rem; margin-bottom: 24px; }
+.lp-price .btn { width: 100%; text-align: center; }
+
+@media (max-width: 1024px) {
+  .lp-cols { grid-template-columns: 1fr; }
+  .lp-price { position: static; }
+  .lp-steps { grid-template-columns: 1fr; gap: 32px; }
+}
+@media (max-width: 760px) {
+  .lp-scope { grid-template-columns: 1fr; gap: 16px; }
+}
+
+
+/* Témoignage de page métier : citation éditoriale */
+.lp-quote {
+  margin-top: 76px;
+  padding-top: 40px;
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px 48px;
+  align-items: end;
+}
+.lp-quote blockquote {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-style: italic;
+  font-size: clamp(1.45rem, 2.5vw, 2.05rem);
+  line-height: 1.26;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  max-width: 860px;
+  margin-top: 16px;
+}
+.lp-quote figcaption {
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--ink-mute);
+  white-space: nowrap;
+  padding-bottom: 6px;
+}
+@media (max-width: 760px) {
+  .lp-quote { grid-template-columns: 1fr; gap: 18px; }
+  .lp-quote figcaption { white-space: normal; }
+}
 
 /* ─────────── Barre d'action mobile ─────────── */
 .mobile-bar {

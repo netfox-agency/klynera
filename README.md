@@ -46,6 +46,34 @@ Ou via `.claude/launch.json` : configuration `klynera` (port 4201).
 - Footer (toutes pages) : liens vers les 3 pages métier
 - sitemap.xml (4 URLs) et llms.txt (liens + détails) à jour
 
+
+## Pages métier : rythme éditorial (2026-09-15)
+
+Le corps des 3 pages n'est plus un bloc de prose unique. Il suit le même rythme de
+surfaces que l'accueil :
+
+| Surface | Section | Traitement |
+|---|---|---|
+| papier | `.lp-head` | titre + photo en carte arrondie |
+| **blanc** | Périmètre | `.lp-scope` : checklist 2 colonnes, pastilles `.icbox` |
+| **encre sombre** | Déroulé | `.lp-steps` : numéros serif italique azur clair, 2 colonnes |
+| papier | Méthode + Budget | `.lp-cols` : prose 1,1fr + `.lp-price` (carte blanche sticky, CTA devis) |
+| papier | Témoignage | `.lp-quote` : citation serif pleine largeur, attribution à droite |
+| papier | FAQ | `<details>` inchangés |
+| blanc | Devis | formulaire inchangé |
+
+Le contenu SEO est repris **au mot près** : aucun h2, aucune phrase, aucun lien interne
+n'a été réécrit. Seule la mise en forme change.
+
+Ajouts CSS : `.lp-scope`, `.lp-steps`, `.lp-step`, `.lp-step-n`, `.lp-cols`, `.lp-price`,
+`.lp-quote`, `.prose a` (les liens internes n'avaient aucun style : invisibles).
+
+## Typographie française (2026-09-15)
+
+Passe sur les 5 pages, hors `<script>` et `<style>` :
+espaces fines insécables (U+202F) avant `: ; ? !` et à l'intérieur des guillemets,
+apostrophes courbes (’). 117 espaces fines, 109 apostrophes.
+
 ## Traçabilité & mesure de rentabilité (2026-08-17)
 
 - **Source de chaque lead** : utm_source/medium/campaign, gclid, referrer, page d'entrée et
