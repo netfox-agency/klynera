@@ -1154,6 +1154,27 @@ section[id], footer, header[id] { scroll-margin-top: 96px; }
 @media (max-width: 1024px) { .zone-grille { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .zone-grille { grid-template-columns: 1fr; } }
 
+
+/* Guides : mise en page d'article */
+.article { width: min(760px, calc(100% - 48px)); margin: 0 auto; padding: 96px 0 40px; }
+.article .chapo { font-size: 1.16rem; line-height: 1.6; color: var(--ink); border-left: 2px solid var(--azur); padding-left: 22px; margin-bottom: 52px; }
+.article h2 { font-size: clamp(1.45rem, 2.5vw, 1.95rem); font-weight: 600; letter-spacing: -0.025em; line-height: 1.15; margin: 52px 0 16px; }
+.article p { color: var(--ink-soft); font-size: 1.04rem; line-height: 1.72; margin-bottom: 18px; }
+.article p strong { color: var(--ink); font-weight: 600; }
+.article-cta { background: var(--ink); color: #fff; border-radius: 20px; padding: 40px 42px; margin-top: 64px; display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
+.article-cta h2 { color: #fff; margin: 0 0 8px; font-size: 1.35rem; }
+.article-cta p { color: rgba(255,255,255,0.64); margin: 0; font-size: 0.98rem; }
+.article-cta .lp-ctas { margin: 0; }
+.article-cta .lp-phone { color: #fff; }
+.article-cta .lp-phone .ico { color: #7cbcff; }
+.guides-liste { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.guide-carte { display: block; background: var(--white); border-radius: 16px; padding: 28px 26px; box-shadow: 0 1px 2px rgba(10,22,34,0.05), 0 10px 28px rgba(10,22,34,0.06), inset 0 0 0 1px var(--line-soft); transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease); }
+.guide-carte:hover { transform: translateY(-3px); box-shadow: 0 2px 4px rgba(10,22,34,0.06), 0 18px 40px rgba(10,22,34,0.1), inset 0 0 0 1px var(--line-soft); }
+.guide-carte h3 { font-size: 1.1rem; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 10px; }
+.guide-carte p { color: var(--ink-soft); font-size: 0.95rem; }
+.guide-carte .lien { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; color: var(--azur); font-weight: 600; font-size: 0.92rem; }
+@media (max-width: 900px) { .guides-liste { grid-template-columns: 1fr; } .article { padding-top: 64px; } .article-cta { padding: 32px 28px; } }
+
 /* ─────────── Barre d'action mobile ─────────── */
 .mobile-bar {
   display: none;

@@ -174,3 +174,34 @@ par nature, et donne un chiffre faussement alarmant.
 
 Pour dépasser 14 communes, il faut du contenu que seul le client peut fournir :
 type de bâti dominant, problème récurrent du secteur, un chantier précis, un lieu reconnaissable.
+
+## Référencement local : phases 3 et 4 (2026-09-23)
+
+**37 URLs indexables**, 109 schemas JSON-LD valides, 0 lien interne cassé.
+
+| Bloc | Pages | Générateur |
+|---|---|---|
+| Accueil + 3 pages service | 4 | — |
+| Lieux : hub, Le Mans, 14 communes | 16 | `seo/build-lieux.py`, `seo/build-zone.py` |
+| Guides : hub + 14 articles | 15 | `seo/build-guides.py` + `seo/guides.py` |
+| Preuve : à propos, tarifs | 2 | `seo/build-pages.py` |
+
+Les 14 guides sont **écrits à la main**, pas générés : 10 722 mots, unicité de 100 %.
+Chacun ouvre sur un chapô qui répond directement à la question posée — c'est le format
+que les moteurs IA citent — puis 4 à 5 sections et 3 questions fréquentes en `FAQPage`.
+
+### Ce qui a été volontairement écarté
+
+- **`/avis/`** : aucun avis client réel. Publier des témoignages inventés avec un schema
+  `AggregateRating` est une fabrication de preuve, et Google sanctionne le faux balisage
+  d'avis. La page se fera quand la fiche Google Business Profile existera.
+- **`/realisations/`** : aucune photo de chantier réel. Des images de banque présentées
+  comme des réalisations seraient un faux.
+- **Pages service supplémentaires** (vitrines, véranda, après-déménagement) : les guides
+  couvrent déjà ces requêtes avec des URLs dédiées. Ajouter des pages service quasi
+  identiques cannibaliserait `/nettoyage-vitres/` et `/nettoyage-fin-de-chantier/`.
+
+### Règle tenue sur tout le contenu
+
+Aucun prix, aucun délai chiffré et aucune référence client ne sont inventés.
+`/tarifs/` explique ce qui fait varier un devis sans afficher le moindre montant.
