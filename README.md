@@ -127,3 +127,23 @@ apostrophes courbes (’). 117 espaces fines, 109 apostrophes.
 | service-chantier.webp | 3616746 |
 | service-bureaux.webp | 9300768 |
 | standards.webp | 37440103 |
+
+## Référencement local : phase 1 (2026-09-23)
+
+Plan complet dans `seo/` : `SEO-STRATEGY.md` (analyse SERP réelle + stratégie),
+`SITE-STRUCTURE.md` (les 52 pages cibles), `communes.json` (28 communes retenues).
+
+Phase 1 exécutée — injection géographique :
+- Schema `LocalBusiness` : `streetAddress` 40 rue Saint André, `addressLocality` Le Mans,
+  `postalCode` 72000, `geo` 47.9819/0.1957, `openingHoursSpecification`, `identifier` SIREN.
+- `areaServed` : **29 villes** au lieu de « France » (interdit pour un SAB depuis juin 2025).
+- Schemas `Service` des 3 pages métier : `areaServed` + `provider` vers le `@id` du business.
+- Titles et meta descriptions géolocalisés, 42-60 car. / 137-142 car.
+- H1 des 3 pages métier : « … au Mans ».
+- NAP visible (adresse, téléphone, horaires) en pied de page sur les 5 pages → `.footer-nap`.
+- `llms.txt` : zone d'intervention et NAP.
+- Mentions légales : SIREN, TVA, adresse, directeur de publication (placeholders supprimés)
+  + passage typographique FR qui les avait oubliées.
+
+⚠️ Seuil du modèle `local-service` : alerte à 30 pages de lieu, **arrêt à 50**.
+Un premier calcul donnait 61 communes dans 27 km : écarté, on reste à 29.

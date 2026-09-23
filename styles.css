@@ -1062,6 +1062,18 @@ section[id], footer, header[id] { scroll-margin-top: 96px; }
   .lp-quote figcaption { white-space: normal; }
 }
 
+
+.footer-nap {
+  font-style: normal;
+  margin-top: 16px;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.58);
+}
+.footer-nap a { color: rgba(255, 255, 255, 0.82); font-weight: 600; }
+.footer-nap a:hover { color: #fff; }
+.footer-nap span { color: rgba(255, 255, 255, 0.44); }
+
 /* ─────────── Barre d'action mobile ─────────── */
 .mobile-bar {
   display: none;

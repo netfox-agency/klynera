@@ -1,0 +1,282 @@
+[
+ {
+  "nom": "Allonnes",
+  "code": "72003",
+  "pop": 10739,
+  "km": 4.6,
+  "km_route": 6.0,
+  "surface": 18.2,
+  "densite": 590,
+  "tier": "A"
+ },
+ {
+  "nom": "Coulaines",
+  "code": "72095",
+  "pop": 8121,
+  "km": 6.0,
+  "km_route": 7.0,
+  "surface": 4.0,
+  "densite": 2049,
+  "tier": "A"
+ },
+ {
+  "nom": "Changé",
+  "code": "72058",
+  "pop": 6911,
+  "km": 7.5,
+  "km_route": 9.0,
+  "surface": 35.3,
+  "densite": 196,
+  "tier": "A"
+ },
+ {
+  "nom": "Arnage",
+  "code": "72008",
+  "pop": 5445,
+  "km": 5.7,
+  "km_route": 7.0,
+  "surface": 10.8,
+  "densite": 502,
+  "tier": "A"
+ },
+ {
+  "nom": "Parigné-l'Évêque",
+  "code": "72231",
+  "pop": 5358,
+  "km": 14.0,
+  "km_route": 18.0,
+  "surface": 63.6,
+  "densite": 84,
+  "tier": "B"
+ },
+ {
+  "nom": "Mulsanne",
+  "code": "72213",
+  "pop": 5244,
+  "km": 7.9,
+  "km_route": 10.0,
+  "surface": 15.3,
+  "densite": 342,
+  "tier": "A"
+ },
+ {
+  "nom": "Écommoy",
+  "code": "72124",
+  "pop": 4868,
+  "km": 18.9,
+  "km_route": 24.0,
+  "surface": 28.7,
+  "densite": 170,
+  "tier": "B"
+ },
+ {
+  "nom": "La Suze-sur-Sarthe",
+  "code": "72346",
+  "pop": 4693,
+  "km": 17.3,
+  "km_route": 22.0,
+  "surface": 21.5,
+  "densite": 218,
+  "tier": "B"
+ },
+ {
+  "nom": "Laigné-Saint-Gervais",
+  "code": "72155",
+  "pop": 4252,
+  "km": 12.7,
+  "km_route": 16.0,
+  "surface": 22.3,
+  "densite": 190,
+  "tier": "B"
+ },
+ {
+  "nom": "Yvré-l'Évêque",
+  "code": "72386",
+  "pop": 4181,
+  "km": 8.3,
+  "km_route": 10.0,
+  "surface": 27.7,
+  "densite": 151,
+  "tier": "A"
+ },
+ {
+  "nom": "Savigné-l'Évêque",
+  "code": "72329",
+  "pop": 4031,
+  "km": 13.0,
+  "km_route": 16.0,
+  "surface": 28.5,
+  "densite": 142,
+  "tier": "B"
+ },
+ {
+  "nom": "Sargé-lès-le-Mans",
+  "code": "72328",
+  "pop": 3851,
+  "km": 7.6,
+  "km_route": 9.0,
+  "surface": 13.9,
+  "densite": 276,
+  "tier": "A"
+ },
+ {
+  "nom": "La Bazoge",
+  "code": "72024",
+  "pop": 3796,
+  "km": 13.8,
+  "km_route": 17.0,
+  "surface": 23.0,
+  "densite": 165,
+  "tier": "B"
+ },
+ {
+  "nom": "Moncé-en-Belin",
+  "code": "72200",
+  "pop": 3697,
+  "km": 9.5,
+  "km_route": 12.0,
+  "surface": 17.6,
+  "densite": 210,
+  "tier": "A"
+ },
+ {
+  "nom": "Champagné",
+  "code": "72054",
+  "pop": 3666,
+  "km": 11.1,
+  "km_route": 14.0,
+  "surface": 14.0,
+  "densite": 262,
+  "tier": "B"
+ },
+ {
+  "nom": "Ruaudin",
+  "code": "72260",
+  "pop": 3481,
+  "km": 6.7,
+  "km_route": 8.0,
+  "surface": 13.9,
+  "densite": 251,
+  "tier": "A"
+ },
+ {
+  "nom": "Cérans-Foulletourte",
+  "code": "72051",
+  "pop": 3341,
+  "km": 18.9,
+  "km_route": 24.0,
+  "surface": 32.5,
+  "densite": 103,
+  "tier": "B"
+ },
+ {
+  "nom": "Guécélard",
+  "code": "72146",
+  "pop": 3202,
+  "km": 11.5,
+  "km_route": 14.0,
+  "surface": 12.2,
+  "densite": 263,
+  "tier": "B"
+ },
+ {
+  "nom": "Teloché",
+  "code": "72350",
+  "pop": 3067,
+  "km": 12.0,
+  "km_route": 15.0,
+  "surface": 23.0,
+  "densite": 134,
+  "tier": "B"
+ },
+ {
+  "nom": "Montfort-le-Gesnois",
+  "code": "72241",
+  "pop": 2939,
+  "km": 17.3,
+  "km_route": 22.0,
+  "surface": 18.8,
+  "densite": 156,
+  "tier": "B"
+ },
+ {
+  "nom": "Spay",
+  "code": "72344",
+  "pop": 2808,
+  "km": 7.5,
+  "km_route": 9.0,
+  "surface": 14.1,
+  "densite": 199,
+  "tier": "A"
+ },
+ {
+  "nom": "Saint-Saturnin",
+  "code": "72320",
+  "pop": 2774,
+  "km": 8.9,
+  "km_route": 11.0,
+  "surface": 9.7,
+  "densite": 286,
+  "tier": "A"
+ },
+ {
+  "nom": "Rouillon",
+  "code": "72257",
+  "pop": 2382,
+  "km": 4.4,
+  "km_route": 6.0,
+  "surface": 9.2,
+  "densite": 258,
+  "tier": "A"
+ },
+ {
+  "nom": "Saint-Georges-du-Bois",
+  "code": "72280",
+  "pop": 2285,
+  "km": 7.0,
+  "km_route": 9.0,
+  "surface": 7.3,
+  "densite": 314,
+  "tier": "A"
+ },
+ {
+  "nom": "La Chapelle-Saint-Aubin",
+  "code": "72065",
+  "pop": 2256,
+  "km": 6.5,
+  "km_route": 8.0,
+  "surface": 6.0,
+  "densite": 376,
+  "tier": "A"
+ },
+ {
+  "nom": "Saint-Pavace",
+  "code": "72310",
+  "pop": 2007,
+  "km": 6.5,
+  "km_route": 8.0,
+  "surface": 5.2,
+  "densite": 387,
+  "tier": "A"
+ },
+ {
+  "nom": "Étival-lès-le-Mans",
+  "code": "72127",
+  "pop": 1826,
+  "km": 8.9,
+  "km_route": 11.0,
+  "surface": 10.3,
+  "densite": 177,
+  "tier": "A"
+ },
+ {
+  "nom": "Trangé",
+  "code": "72360",
+  "pop": 1637,
+  "km": 8.2,
+  "km_route": 10.0,
+  "surface": 11.2,
+  "densite": 146,
+  "tier": "A"
+ }
+]
