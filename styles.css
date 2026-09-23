@@ -1074,6 +1074,86 @@ section[id], footer, header[id] { scroll-margin-top: 96px; }
 .footer-nap a:hover { color: #fff; }
 .footer-nap span { color: rgba(255, 255, 255, 0.44); }
 
+
+/* Hero de page de lieu : même bande, sans photo */
+.svc-hero--plain { min-height: clamp(380px, 46svh, 470px); }
+.svc-hero--plain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(120% 90% at 82% 12%, rgba(20, 98, 212, 0.26), transparent 62%),
+    radial-gradient(90% 70% at 8% 100%, rgba(124, 188, 255, 0.09), transparent 58%);
+  pointer-events: none;
+}
+.svc-hero--plain .svc-hero-inner { padding: 140px 0 60px; }
+.svc-hero--plain .svc-hero-body { max-width: 760px; }
+
+/* Grille des prestations sur une page de lieu */
+.loc-services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.loc-service {
+  display: block;
+  background: var(--white);
+  border-radius: 16px;
+  padding: 28px 26px;
+  box-shadow: 0 1px 2px rgba(10, 22, 34, 0.05), 0 10px 28px rgba(10, 22, 34, 0.06), inset 0 0 0 1px var(--line-soft);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+.loc-service:hover { transform: translateY(-3px); box-shadow: 0 2px 4px rgba(10, 22, 34, 0.06), 0 18px 40px rgba(10, 22, 34, 0.1), inset 0 0 0 1px var(--line-soft); }
+.loc-service h3 { font-size: 1.12rem; font-weight: 600; letter-spacing: -0.02em; margin: 14px 0 8px; }
+.loc-service p { color: var(--ink-soft); font-size: 0.96rem; }
+.loc-service .lien { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; color: var(--azur); font-weight: 600; font-size: 0.93rem; }
+
+/* Communes voisines */
+.loc-voisines { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.loc-voisines a {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 9px 18px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  transition: border-color 0.25s var(--ease), color 0.25s var(--ease);
+}
+.loc-voisines a:hover { border-color: var(--azur); color: var(--azur); }
+
+@media (max-width: 900px) {
+  .loc-services { grid-template-columns: 1fr; gap: 18px; }
+  .svc-hero--plain .svc-hero-inner { padding: 118px 0 52px; }
+}
+
+
+/* Repères chiffrés d'une commune */
+.loc-reperes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border-radius: 14px; overflow: hidden; margin-top: 8px; }
+.loc-repere { background: var(--paper); padding: 22px 20px; }
+.section-dark .loc-repere { background: #0e1b29; }
+.loc-repere dt { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--ink-mute); margin-bottom: 8px; }
+.section-dark .loc-repere dt { color: rgba(255,255,255,0.42); }
+.loc-repere dd { font-size: 1.25rem; font-weight: 600; letter-spacing: -0.02em; }
+.section-dark .loc-repere dd { color: #fff; }
+.loc-repere dd small { display: block; font-size: 0.82rem; font-weight: 400; color: var(--ink-mute); margin-top: 3px; letter-spacing: 0; }
+.section-dark .loc-repere dd small { color: rgba(255,255,255,0.5); }
+@media (max-width: 760px) { .loc-reperes { grid-template-columns: 1fr 1fr; } }
+
+
+/* Grille des communes de la zone */
+.zone-grille { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border-radius: 14px; overflow: hidden; }
+.zone-grille > * { background: var(--paper); padding: 18px 20px; font-weight: 600; font-size: 0.97rem; display: flex; align-items: baseline; justify-content: space-between; gap: 12px; transition: background 0.25s var(--ease), color 0.25s var(--ease); }
+.section-white .zone-grille > * { background: var(--white); }
+.section-dark .zone-grille { background: rgba(255,255,255,0.09); }
+.section-dark .zone-grille > * { background: #0e1b29; color: #fff; }
+.zone-grille a:hover { background: var(--azur); color: #fff; }
+.section-dark .zone-grille a:hover { background: var(--azur); }
+.zone-grille span span, .zone-grille a span { font-weight: 400; font-size: 0.85rem; color: var(--ink-mute); white-space: nowrap; }
+.section-dark .zone-grille span span, .section-dark .zone-grille a span { color: rgba(255,255,255,0.45); }
+.zone-grille a:hover span { color: rgba(255,255,255,0.75); }
+.zone-sans { color: var(--ink-mute); font-weight: 500; }
+.zone-fill { pointer-events: none; }
+.section-dark .zone-sans { color: rgba(255,255,255,0.5) !important; font-weight: 500; }
+.section-dark .zone-fill { background: #0e1b29; }
+@media (max-width: 1024px) { .zone-grille { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .zone-grille { grid-template-columns: 1fr; } }
+
 /* ─────────── Barre d'action mobile ─────────── */
 .mobile-bar {
   display: none;

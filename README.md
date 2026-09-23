@@ -147,3 +147,30 @@ Phase 1 exécutée — injection géographique :
 
 ⚠️ Seuil du modèle `local-service` : alerte à 30 pages de lieu, **arrêt à 50**.
 Un premier calcul donnait 61 communes dans 27 km : écarté, on reste à 29.
+
+## Référencement local : phase 2 (2026-09-23)
+
+16 pages de lieu créées : `/zone-intervention/` (hub, 28 communes listées),
+`/nettoyage-le-mans/` (page principale) et 14 pages de commune.
+
+Générateurs reproductibles : `seo/build-lieux.py` et `seo/build-zone.py`.
+Données : `seo/communes.json` (14 publiées) et `seo/communes-zone.json` (28 déclarées),
+issues de `geo.api.gouv.fr` — population, superficie, densité, code postal,
+intercommunalité, distance et orientation réelles depuis Le Mans.
+
+### Pourquoi 14 communes et pas 28
+
+Le texte se branche sur cinq axes (distance, densité, population, intercommunalité,
+orientation) avec des paragraphes composés de clauses indépendantes. Malgré ça,
+l'unicité éditoriale mesurée sur 28 pages plafonnait à **29,8 %**, sous le seuil de 40 %
+du modèle `local-service`. Mesure par sous-ensembles : 8 → 57,3 %, 12 → 45,1 %,
+**14 → 40,3 %**, 20 → 35,0 %, 28 → 29,8 %.
+
+Publier 28 pages aurait reproduit exactement le défaut des fermes à pages qu'on veut battre.
+
+⚠️ **Mesurer l'unicité sur les blocs éditoriaux uniquement** (lede, étapes, prose, repères,
+FAQ). Mesurée sur tout le `<main>`, elle inclut le formulaire et le pied de page, communs
+par nature, et donne un chiffre faussement alarmant.
+
+Pour dépasser 14 communes, il faut du contenu que seul le client peut fournir :
+type de bâti dominant, problème récurrent du secteur, un chantier précis, un lieu reconnaissable.

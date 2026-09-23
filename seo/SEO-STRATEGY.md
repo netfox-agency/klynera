@@ -64,13 +64,29 @@ Le modèle `local-service` du skill impose des seuils. Ils sont respectés :
 
 | Règle | Seuil | Plan |
 |---|---|---|
-| Pages de lieu | alerte 30 · **arrêt 50** | **29** |
+| Pages de lieu | alerte 30 · **arrêt 50** | **16** |
 | Page lieu principale | 600 mots, 60 % unique | Le Mans, 900 mots visés |
 | Page commune | 500 mots, 40 % unique | 550-650 mots |
 | Page service | 800 mots, 100 % unique | 900-1 100 mots |
 
-Un premier calcul donnait 61 communes dans 27 km. **Écarté** : au-delà de 50 pages de lieu on
-bascule dans le motif exact reproché aux fermes à pages, et le skill l'interdit.
+Deux coupes successives, chacune mesurée :
+
+1. Un premier calcul donnait **61 communes** dans 27 km. Écarté : au-delà de 50 pages de lieu
+   on bascule dans le motif reproché aux fermes à pages, et le skill l'interdit.
+2. À **28 communes**, l'unicité éditoriale mesurée tombait à **29,8 %**, sous le seuil de 40 %.
+   La mesure a été refaite sur des sous-ensembles :
+
+| Communes publiées | Unicité éditoriale | Pages au-dessus du seuil |
+|---|---|---|
+| 8 | 57,3 % | 8/8 |
+| 12 | 45,1 % | 7/12 |
+| **14** | **40,3 %** | limite exacte |
+| 20 | 35,0 % | 4/20 |
+| 28 | 29,8 % | 3/28 |
+
+**Décision : 14 communes publiées**, plus Le Mans et le hub de zone, soit 16 pages de lieu.
+Les 14 autres communes restent déclarées dans `areaServed` et listées sur
+`/zone-intervention/` sans page dédiée : la zone est couverte, sans contenu creux.
 
 ### Le piège à ne pas reproduire
 Ajouter un bloc identique sur chaque page de commune en ne changeant que les chiffres **fait
